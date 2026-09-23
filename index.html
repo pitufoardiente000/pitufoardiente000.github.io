@@ -3,9 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Etiqueta Meta de Verificación de AdSense -->
+  <meta name="google-adsense-account" content="ca-pub-1263451145751506">
+
   <title>Generador de Enlaces</title>
 
-  <!-- Script Principal de AdSense con TU ID REAL -->
+  <!-- Script Principal de AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1263451145751506"
        crossorigin="anonymous"></script>
 
@@ -43,7 +47,6 @@
       max-width: 380px;
     }
 
-    /* Estilo para los contenedores de Anuncios */
     .ad-box {
       width: 100%;
       background: rgba(255, 255, 255, 0.05);
@@ -52,7 +55,6 @@
       text-align: center;
     }
 
-    /* Estilo de la Carpeta / Tarjeta */
     .card {
       background: #ffffff;
       padding: 30px 25px;
@@ -96,7 +98,6 @@
       transform: scale(0.98);
     }
 
-    /* Mensaje de éxito animado */
     .mensaje-exito {
       display: none;
       margin-top: 20px;
@@ -135,7 +136,7 @@
 
   <div class="container">
 
-    <!-- Bloque de Anuncio Superior con TU ID REAL -->
+    <!-- Bloque de Anuncio Superior -->
     <div class="ad-box">
       <ins class="adsbygoogle"
            style="display:block"
@@ -180,7 +181,6 @@
 
   </div>
 
-  <!-- Reproductor de audio invisible -->
   <audio id="reproductorMusica" preload="auto" style="display: none;"></audio>
 
   <script>
@@ -241,7 +241,6 @@
     }
 
     function copiarEnlace(urlACopiar, idMensaje) {
-      // Ocultar mensajes de éxito previos
       document.querySelectorAll('.mensaje-exito').forEach(msg => msg.style.display = 'none');
 
       if (!urlACopiar) {
