@@ -236,14 +236,17 @@
         return;
       }
 
-      // Abre el anuncio Smartlink en una nueva pestaña
-      window.open(smartlinkUrl, '_blank');
-
+      // 1. Copiar el enlace al portapapeles
       navigator.clipboard.writeText(urlACopiar).then(() => {
+        // 2. Mostrar el mensaje de éxito
         const mensaje = document.getElementById(idMensaje);
         mensaje.style.display = 'block';
 
+        // 3. Reproducir audio
         reproducirAudioAleatorio();
+
+        // 4. Abrir la publicidad en una pestaña nueva
+        window.open(smartlinkUrl, '_blank');
       }).catch(err => {
         console.error('Error al copiar el enlace: ', err);
       });
