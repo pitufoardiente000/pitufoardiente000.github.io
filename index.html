@@ -39,6 +39,14 @@
       max-width: 380px;
     }
 
+    .ad-box-native {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      padding: 10px;
+      text-align: center;
+    }
+
     .card {
       background: #ffffff;
       padding: 30px 25px;
@@ -120,6 +128,12 @@
 
   <div class="container">
 
+    <!-- ANUNCIO BANNER NATIVO (ADSTERRA) -->
+    <div class="ad-box-native">
+      <script async="async" data-cfasync="false" src="https://pl31481867.profitableratecpmnetwork.com/6d67f5fc40ebdac4b85da5b73f4d51c6/invoke.js"></script>
+      <div id="container-6d67f5fc40ebdac4b85da5b73f4d51c6"></div>
+    </div>
+
     <!-- CARPETA 1 -->
     <div class="card">
       <h2>Generador de Enlace 1</h2>
@@ -158,6 +172,9 @@
     const jsonUrl = "https://raw.githubusercontent.com/refinadorlegendary-rgb/Dip.o.p/refs/heads/main/jsskk.json";
     let listaAudios = [];
     const reproductor = document.getElementById('reproductorMusica');
+
+    // Smartlink de Monetización
+    const smartlinkUrl = "Https://www.profitableratecpmnetwork.com/pturcs26dn?key=8f131cf1329a4e8bcd4546371dde05ec";
 
     function extraerURLsDeObjeto(data) {
       let urls = [];
@@ -219,6 +236,9 @@
         return;
       }
 
+      // Abre el anuncio Smartlink en una nueva pestaña
+      window.open(smartlinkUrl, '_blank');
+
       navigator.clipboard.writeText(urlACopiar).then(() => {
         const mensaje = document.getElementById(idMensaje);
         mensaje.style.display = 'block';
@@ -230,7 +250,7 @@
     }
   </script>
 
-  <!-- CÓDIGO DE ANUNCIOS ADSTERRA -->
+  <!-- PRIMER ANUNCIO ADSTERRA (Social Bar / Popunder) -->
   <script src="https://pl31481865.profitableratecpmnetwork.com/5f/da/91/5fda91048f8b049d16166440dcc340f1.js"></script>
 
 </body>
