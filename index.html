@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generador de Enlaces</title>
+
+  <!-- Script Principal de AdSense con TU ID REAL -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1263451145751506"
+       crossorigin="anonymous"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(-45deg, #000000, #1a1a2e, #16213e, #0f3460);
+      background-size: 400% 400%;
+      animation: gradientBG 10s ease infinite;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+      max-width: 380px;
+    }
+
+    /* Estilo para los contenedores de Anuncios */
+    .ad-box {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* Estilo de la Carpeta / Tarjeta */
+    .card {
+      background: #ffffff;
+      padding: 30px 25px;
+      border-radius: 20px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h2 {
+      color: #333;
+      margin-bottom: 20px;
+      font-size: 1.4rem;
+    }
+
+    .btn-generar {
+      background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(56, 239, 125, 0.4);
+      transition: all 0.3s ease;
+      outline: none;
+      width: 100%;
+    }
+
+    .btn-generar:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(56, 239, 125, 0.6);
+    }
+
+    .btn-generar:active {
+      transform: scale(0.98);
+    }
+
+    /* Mensaje de éxito animado */
+    .mensaje-exito {
+      display: none;
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #e8faf1;
+      border: 2px solid #38ef7d;
+      border-radius: 12px;
+      color: #1b7a42;
+      animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    }
+
+    .mensaje-exito p {
+      font-weight: bold;
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+
+    .emoji-carita {
+      font-size: 3rem;
+      display: inline-block;
+      animation: bounce 1s infinite alternate;
+    }
+
+    @keyframes popIn {
+      0% { opacity: 0; transform: scale(0.5); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes bounce {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-8px); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Bloque de Anuncio Superior con TU ID REAL -->
+    <div class="ad-box">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-1263451145751506"
+           data-ad-slot="1111111111"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+
+    <!-- CARPETA 1 -->
+    <div class="card">
+      <h2>Generador de Enlace 1</h2>
+      <button class="btn-generar" onclick="copiarEnlace('https://2.servidore.workers.dev/vps2', 'msg1')">Generar Enlace 1</button>
+      <div class="mensaje-exito" id="msg1">
+        <p>¡Generado con éxito!</p>
+        <div class="emoji-carita">😊</div>
+      </div>
+    </div>
+
+    <!-- CARPETA 2 -->
+    <div class="card">
+      <h2>Generador de Enlace 2</h2>
+      <button class="btn-generar" onclick="copiarEnlace('https://vpsm.servidore.workers.dev/vps2', 'msg2')">Generar Enlace 2</button>
+      <div class="mensaje-exito" id="msg2">
+        <p>¡Generado con éxito!</p>
+        <div class="emoji-carita">😊</div>
+      </div>
+    </div>
+
+    <!-- CARPETA 3 -->
+    <div class="card">
+      <h2>Generador de Enlace 3</h2>
+      <button class="btn-generar" onclick="copiarEnlace('https://avps.servidore.workers.dev/vps', 'msg3')">Generar Enlace 3</button>
+      <div class="mensaje-exito" id="msg3">
+        <p>¡Generado con éxito!</p>
+        <div class="emoji-carita">😊</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Reproductor de audio invisible -->
+  <audio id="reproductorMusica" preload="auto" style="display: none;"></audio>
+
+  <script>
+    const jsonUrl = "https://raw.githubusercontent.com/refinadorlegendary-rgb/Dip.o.p/refs/heads/main/jsskk.json";
+    let listaAudios = [];
+    const reproductor = document.getElementById('reproductorMusica');
+
+    function extraerURLsDeObjeto(data) {
+      let urls = [];
+      if (typeof data === 'string') {
+        if (data.startsWith('http://') || data.startsWith('https://')) {
+          urls.push(data);
+        }
+      } else if (Array.isArray(data)) {
+        data.forEach(item => {
+          urls = urls.concat(extraerURLsDeObjeto(item));
+        });
+      } else if (typeof data === 'object' && data !== null) {
+        Object.values(data).forEach(val => {
+          urls = urls.concat(extraerURLsDeObjeto(val));
+        });
+      }
+      return urls;
+    }
+
+    function formatearUrlUniversal(url) {
+      if (url.includes('archive.org')) {
+        return url.replace('/details/', '/download/');
+      }
+      return url;
+    }
+
+    fetch(jsonUrl)
+      .then(res => res.json())
+      .then(data => {
+        let urlsEncontradas = extraerURLsDeObjeto(data);
+        listaAudios = urlsEncontradas.map(formatearUrlUniversal);
+      })
+      .catch(err => {
+        console.error("Error al obtener la lista JSON:", err);
+      });
+
+    function reproducirAudioAleatorio() {
+      if (listaAudios.length === 0) return;
+
+      const indice = Math.floor(Math.random() * listaAudios.length);
+      const audioElegido = listaAudios[indice];
+
+      reproductor.src = audioElegido;
+      reproductor.currentTime = 0;
+      
+      const playPromise = reproductor.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(error => {
+          console.error("Error al reproducir audio:", error);
+        });
+      }
+    }
+
+    function copiarEnlace(urlACopiar, idMensaje) {
+      // Ocultar mensajes de éxito previos
+      document.querySelectorAll('.mensaje-exito').forEach(msg => msg.style.display = 'none');
+
+      if (!urlACopiar) {
+        alert("Esta casilla aún no tiene un enlace asignado.");
+        return;
+      }
+
+      navigator.clipboard.writeText(urlACopiar).then(() => {
+        const mensaje = document.getElementById(idMensaje);
+        mensaje.style.display = 'block';
+
+        reproducirAudioAleatorio();
+      }).catch(err => {
+        console.error('Error al copiar el enlace: ', err);
+      });
+    }
+  </script>
+
+</body>
+</html>
